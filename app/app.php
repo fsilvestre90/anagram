@@ -34,8 +34,12 @@
 
     $app->get("/view_anagram_results", function() use($app) {
         $my_AnagramGenerator = new AnagramGenerator;
-        $anagram_string = $my_AnagramGenerator->makeAnagram($_GET['string'],$_GET['ana1'],$_GET['ana2'],$_GET['ana3'],$_GET['ana4'],$_GET['ana5'],$_GET['ana6'] );
-        return $app['twig']->render('view_anagram_results.html.twig',array('result' => $anagram_string));
+        $input_string = $_GET['string'];
+        $possibilities = array($_GET['ana1'],$_GET['ana2'],$_GET['ana3'],$_GET['ana4'],$_GET['ana5'],$_GET['ana6']);
+
+        $results = $my_AnagramGenerator->makeAnagram($input_string, $possibilities);
+
+        return $app['twig']->render('view_anagram_results.html.twig', array('results' => $results));
     });
 
     return $app;

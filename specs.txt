@@ -4,7 +4,10 @@ Handwritten Specs
 LOGIC
 1) Take user input string, insert into array, do sort so characters are in alphabetical order
 
-2)
+2) Take user possibility string(s), insert them into associative array, sort them into alphabetical order
+
+    array[0] = split($possibility_string);
+    sort(array[0]);
 
 
 
@@ -14,4 +17,5 @@ TESTS
 1) Take 'bread' as string input, return 'abder'
   - Data type on return: string
 
-2) 
+2) Make sure that 'bread' is NOT an anagram of bread
+  -  Data type on return: true
