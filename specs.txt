@@ -1,0 +1,17 @@
+Handwritten Specs
+
+
+LOGIC
+1) Take user input string, insert into array, do sort so characters are in alphabetical order
+
+2)
+
+
+
+
+TESTS
+
+1) Take 'bread' as string input, return 'abder'
+  - Data type on return: string
+
+2) 
