@@ -22,12 +22,12 @@ class anagramGenerator
 
                     //sort possibilities
 
-                    // $possibility_sorted = str_split($possibility);
-                    // sort($possibility_sorted);
+                    $possibility_sorted = str_split($possibility);
+                    sort($possibility_sorted);
                     //
-                    // if () {
-                    //
-                    // }
+                    if ($input_sorted != $possibility_sorted) {
+                        $output[$possibility] = 2;
+                    }
 
                 }
                 else {

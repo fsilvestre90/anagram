@@ -33,6 +33,34 @@
 
 		}
 
+		function test_makeAnagram_verifyNotAnagram()
+		{
+				$test_AnagramGenerator = new AnagramGenerator;
+				$input_word = "bread";
+				$possibilities = array("jim");
+
+				//Act
+				$result = $test_AnagramGenerator->makeAnagram($input_word, $possibilities);
+
+				//Assert
+				$this->assertEquals(array('jim' => 2), $result);
+
+		}
+
+		function test_makeAnagram_verifyAnagram()
+		{
+				$test_AnagramGenerator = new AnagramGenerator;
+				$input_word = "bread";
+				$possibilities = array("beard");
+
+				//Act
+				$result = $test_AnagramGenerator->makeAnagram($input_word, $possibilities);
+
+				//Assert
+				$this->assertEquals(array('bread' => 3), $result);
+
+		}
+
 	}
 
 ?>
