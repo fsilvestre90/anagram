@@ -1,12 +1,13 @@
 <?php
-    class anagramGenerator 
+    class anagramGenerator
     {
         function makeAnagram($input)
         {
 
         	$input_array = str_split($input);
-        	var_dump($input_array); 
-
+          sort($input_array);
+          
+        	return implode($input_array);
 
         }
 
