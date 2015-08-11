@@ -5,17 +5,15 @@
     </head>
     <body>
         <div class='container'>
-            <div class='row'>
-                <div class='col-md-6'>
-                    <h1>Possible Anagrams:</h1>
-                    <h3> {{ result }}</h3>
-                </div>
-            </div> <!-- End of row -->
-            <div class='row'>
-                <div class='col-md-4'>
-                    <strong><a href='/'>Back to input form</a></strong>
-                </div> 
-            </div>  <!-- End of row -->                
+            {% if results is not empty %}
+                {% for result in results %}
+                    {% if results.getValue == 1 %}
+
+                    
+                {% endfor %}
+            {% else %}
+                <p> No possibilities </p>
+            {% endif %}
         </div>  <!-- End of container -->
     </body>
 </html>
