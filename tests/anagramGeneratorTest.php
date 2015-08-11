@@ -57,7 +57,7 @@
 				$result = $test_AnagramGenerator->makeAnagram($input_word, $possibilities);
 
 				//Assert
-				$this->assertEquals(array('bread' => 3), $result);
+				$this->assertEquals(array('beard' => 3), $result);
 
 		}
 

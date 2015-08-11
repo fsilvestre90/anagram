@@ -27,6 +27,8 @@ class anagramGenerator
                     //
                     if ($input_sorted != $possibility_sorted) {
                         $output[$possibility] = 2;
+                    } else {
+                        $output[$possibility] = 3;
                     }
 
                 }
