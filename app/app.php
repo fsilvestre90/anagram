@@ -35,11 +35,13 @@
     $app->get("/view_anagram_results", function() use($app) {
         $my_AnagramGenerator = new AnagramGenerator;
         $input_string = $_GET['string'];
-        $possibilities = array($_GET['ana1'],$_GET['ana2'],$_GET['ana3'],$_GET['ana4'],$_GET['ana5'],$_GET['ana6']);
+        $possibilities = array($_GET['ana1'],$_GET['ana2'],$_GET['ana3']);
+        // ,$_GET['ana4'],$_GET['ana5'],$_GET['ana6']);
 
         $results = $my_AnagramGenerator->makeAnagram($input_string, $possibilities);
+        // $my_AnagramGenerator->setValue($results);
 
-        return $app['twig']->render('view_anagram_results.html.twig', array('results' => $results));
+        return $app['twig']->render('view_anagram_results.html.twig', array('results' => $results, 'possibilities' => $possibilities, 'counter' => 0));
     });
 
     return $app;

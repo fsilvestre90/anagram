@@ -7,9 +7,9 @@
         <div class='container'>
             {% if results is not empty %}
                 {% for result in results %}
-                    {% if results.getValue == 1 %}
-
-                    
+                    {{ possibilities[counter] }}
+                    {{ result }}
+                    {% set counter = counter + 1 %}
                 {% endfor %}
             {% else %}
                 <p> No possibilities </p>

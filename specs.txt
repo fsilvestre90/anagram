@@ -9,7 +9,19 @@ LOGIC
     array[0] = split($possibility_string);
     sort(array[0]);
 
+Input = bread
+Key/Value
+bread => 1
+jim => 2
+beard => 3
 
+for each result
+  if key == 1
+    Display this is not an anagram of itself
+  if key == 2
+    Display "This is not an anagram"
+  if key == 3
+    Display "this is an anagram"
 
 
 TESTS
